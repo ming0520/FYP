@@ -1,0 +1,624 @@
+﻿1
+00:00:00,440 --> 00:00:01,760
+Hello Guys 
+
+2
+00:00:01,940 --> 00:00:04,680
+I'm here to propose an auto editing app
+
+3
+00:00:04,680 --> 00:00:06,920
+Hello, my name is Tan Zhong Ming
+
+4
+00:00:06,940 --> 00:00:10,120
+Just a reminder, It is supposed to be automatic
+
+5
+00:00:10,120 --> 00:00:12,700
+but actually you have to push this button.
+
+6
+00:00:12,700 --> 00:00:14,700
+Let us do a quick recap.
+
+7
+00:00:14,700 --> 00:00:17,400
+The first problem we mentioned in last time is
+
+8
+00:00:17,400 --> 00:00:19,980
+we need to  remove stuttered speech manually
+
+9
+00:00:19,980 --> 00:00:22,820
+But this time i do a little bit modification
+
+10
+00:00:22,820 --> 00:00:27,000
+My second problem is improving the accuracy of subtitles.
+
+11
+00:00:27,000 --> 00:00:29,520
+This can be done by using several techniques such as
+
+12
+00:00:29,520 --> 00:00:32,360
+denoising, audio pre-process and deep speech.
+
+13
+00:00:32,360 --> 00:00:37,820
+Audio pre-processing includes pre-emphasis, normalization, amplification and etc.
+
+14
+00:00:37,820 --> 00:00:41,880
+But denoising is not necessary is audio pre-processing,
+
+15
+00:00:41,880 --> 00:00:45,840
+Because it can be done by using AI to remove the background noise.
+
+16
+00:00:45,840 --> 00:00:48,100
+This has been done by Nvidia,
+
+17
+00:00:48,100 --> 00:00:51,120
+they publish a new feature for their GPU
+
+18
+00:00:51,120 --> 00:00:54,200
+which is able to remove the background noise real time
+
+19
+00:00:54,200 --> 00:00:57,100
+by using the latest RTX series GPU.
+
+20
+00:00:57,100 --> 00:01:01,240
+Next, deep speech has a good potential to become the solution.
+
+21
+00:01:01,240 --> 00:01:03,460
+We will talk about this later.
+
+22
+00:01:03,460 --> 00:01:05,680
+So, the scope also must change,
+
+23
+00:01:05,680 --> 00:01:06,880
+here is my latest scope.
+
+24
+00:01:06,880 --> 00:01:12,180
+First we need to perform pre-processing techniques to audio data set for better sound quality
+
+25
+00:01:12,180 --> 00:01:17,880
+Sceond, build and train an Artificial Neural Network (ANN) for the stuttered speech classification.
+
+26
+00:01:17,880 --> 00:01:23,440
+Third, we need to build and train an End-to-end deep learning model for Deep Speech
+
+27
+00:01:23,440 --> 00:01:27,540
+The deep speech will implement in auto subtitle algorithm.
+
+28
+00:01:27,620 --> 00:01:34,380
+Fourth, we need to develop an application and algorithm for Android to automatically remove the stuttered speech.
+
+29
+00:01:34,380 --> 00:01:42,120
+Fifth, we need to implement audio pre-processing technique to improve the accuracy of speech recognition to generate subtitle.
+
+30
+00:01:42,120 --> 00:01:47,420
+The last one, we need to develop an improved version of auto subtitle generator.
+
+31
+00:01:47,420 --> 00:01:48,600
+Why we need this app.
+
+32
+00:01:48,600 --> 00:01:51,200
+We mentioned removing the stuttered speech by humans
+
+33
+00:01:51,200 --> 00:01:52,980
+is slow and inefficient. 
+
+34
+00:01:52,980 --> 00:01:57,160
+The editor is required to remove and import one by one from the library.
+
+35
+00:01:57,160 --> 00:02:00,200
+Apart from that, editors need to denoise, transcribe and
+
+36
+00:02:00,200 --> 00:02:04,540
+process the audio manually to get better results from the subtitle generator.
+
+37
+00:02:04,540 --> 00:02:08,120
+The proposed app has the potential to detect and remove the stuttered speech
+
+38
+00:02:08,120 --> 00:02:12,840
+automatically in batch. Second it has better accuracy to auto generate subtitles.
+
+39
+00:02:12,840 --> 00:02:17,620
+The processing time for the current video editing process is high, but the app is low.
+
+40
+00:02:17,620 --> 00:02:21,840
+That means it is faster. Apart from that the human involvement for the proposed app
+
+41
+00:02:21,840 --> 00:02:24,560
+is significantly reduced. Why do we need this app?  
+
+42
+00:02:24,560 --> 00:02:27,920
+From my study, 4 out of 6 of my friends are beginner level.
+
+43
+00:02:28,080 --> 00:02:32,140
+So, they hope there is app like this with the subtitle generator.
+
+44
+00:02:32,140 --> 00:02:34,660
+Now, let me share what I found on the internet.
+
+45
+00:02:34,660 --> 00:02:37,760
+The first one of course is comparative study.
+
+46
+00:02:37,760 --> 00:02:43,040
+Dataset is always the most important step in machine learning. No data no talk.
+
+47
+00:02:43,040 --> 00:02:46,880
+There is a lot of different language dataset for stuttered speech such as
+
+48
+00:02:46,880 --> 00:02:52,420
+UCLASS, Indian Regional Language, Polish Language, German Language and etc.
+
+49
+00:02:52,420 --> 00:02:57,020
+For the UCLASS database, they have version 1 and version2.
+
+50
+00:02:57,020 --> 00:03:01,400
+The UCLASS database s collected by University College of London.
+
+51
+00:03:01,400 --> 00:03:07,340
+The full name for dataset is University College London’s Archive of Stuttered Speech. 
+
+52
+00:03:07,340 --> 00:03:14,240
+First version only includes monolog, the second version includes monolog, reading and conversation.
+
+53
+00:03:14,240 --> 00:03:20,160
+The age for the version 1 is between 5 years 4 month until 47 years old.
+
+54
+00:03:20,160 --> 00:03:22,700
+For the version 2, we have more choices.
+
+55
+00:03:22,700 --> 00:03:27,220
+ Version 2 is 7 years old 10 month until 20 years 7 month.
+
+56
+00:03:27,220 --> 00:03:34,300
+Version 1 includes 120 male and 18 females and version 2 has more options.
+
+57
+00:03:34,300 --> 00:03:39,440
+Here is the summary of the several previous collections of research work on
+
+58
+00:03:39,440 --> 00:03:43,420
+stuttered speech recognition. We can see in the early age,
+
+59
+00:03:43,420 --> 00:03:48,380
+the database they used is non standard. The size of the sample and speaker are also non fixed.
+
+60
+00:03:48,380 --> 00:03:53,640
+The features they used also are non standardized and required a lot of process on audio.
+
+61
+00:03:53,640 --> 00:04:01,260
+But they still get pretty good results, the accuracy they get is range from 73.25% to 92%.
+
+62
+00:04:01,980 --> 00:04:06,560
+They used ANN, HMM and SVM as the classifier. 
+
+63
+00:04:06,560 --> 00:04:10,060
+This is the summary for research within 10 years.
+
+64
+00:04:10,060 --> 00:04:14,000
+We can see almost everyone uses the UCLASS dataset as their data. 
+
+65
+00:04:14,000 --> 00:04:17,240
+This will provide a very good baseline for our project..
+
+66
+00:04:17,240 --> 00:04:22,280
+Most of them use MFCC features and k-NN architecture. 
+
+67
+00:04:22,280 --> 00:04:25,740
+We can see the accuracy does improve from previous work.
+
+68
+00:04:25,740 --> 00:04:29,100
+But the downside of MFCC is sensitive to noise.
+
+69
+00:04:29,100 --> 00:04:35,580
+This is the second literature review, the paper talking about the detection and analysis of stuttered speech.
+
+70
+00:04:35,580 --> 00:04:41,400
+They use MFCC technique to extract the feature so no pre-emphasis is required. 
+
+71
+00:04:41,400 --> 00:04:44,920
+Then classify the stuttered speech by using SVM.
+
+72
+00:04:44,920 --> 00:04:50,500
+They obtain 96.67% of accuracy with 10-12 coefficient.
+
+73
+00:04:50,500 --> 00:04:55,440
+Third paper that I read is speech recognition and correction of stuttered speech.
+
+74
+00:04:55,440 --> 00:05:01,880
+The goal of this paper is to develop a system that is able to identify and correct the stuttered speech.
+
+75
+00:05:01,880 --> 00:05:07,100
+Two algorithms are required to make it work. First is the algorithm to remove prolonged stuttered speech.
+
+76
+00:05:07,100 --> 00:05:12,020
+This algorithm will obtain the maximum amplitude as input for the neural network.
+
+77
+00:05:12,020 --> 00:05:16,880
+Then the neural network will output a proper threshold to remove the prolongation.
+
+78
+00:05:16,880 --> 00:05:20,140
+Second is removing the repetition of stuttered speech.
+
+79
+00:05:20,140 --> 00:05:25,780
+This algorithm will use Text-to-Speech technique to remove repetition of stuttered speech.
+
+80
+00:05:25,780 --> 00:05:29,940
+They chunk the samples into 6 seconds segments for training.
+
+81
+00:05:29,940 --> 00:05:36,500
+The processing time for this system is around 5- 8 seconds and they obtain 86% of accuracy.
+
+82
+00:05:36,580 --> 00:05:38,720
+Last one is deep speech 2.
+
+83
+00:05:38,720 --> 00:05:40,720
+Also known as DS2.
+
+84
+00:05:40,720 --> 00:05:42,720
+This research is done by Baidu
+
+85
+00:05:42,720 --> 00:05:47,780
+The goal of deep speech is to predict multiple languages by only using 1 model.
+
+86
+00:05:47,780 --> 00:05:52,900
+This is because the current ASR Automatic Speech Recognition is overcomplicated.
+
+87
+00:05:52,900 --> 00:05:57,340
+Because the current system divides the word into phonemes, syllables and more.
+
+88
+00:05:57,340 --> 00:06:02,720
+This will make the current system face the problem if they need to implement another new language.
+
+89
+00:06:02,720 --> 00:06:07,820
+So, they hope to develop only one engine applicable to all the languages.
+
+90
+00:06:07,820 --> 00:06:13,540
+And they hope to solve other issues too, such as accented speech, noisy environment and more.
+
+91
+00:06:13,540 --> 00:06:18,080
+This is the architecture of the DS2. Total 11 layers.
+
+92
+00:06:18,080 --> 00:06:24,020
+They have 3 convolution layers, 7 recurrent layers and 1 fully connected layer.
+
+93
+00:06:24,020 --> 00:06:30,860
+The fully connected layer is responsible to calculate the probability distribution and provide output to the CTC layer.
+
+94
+00:06:30,860 --> 00:06:34,940
+and Batch Normalization is implement for all the layer.
+
+95
+00:06:34,940 --> 00:06:42,360
+The data they used for English in the experiment is WSJ, Switchboard, Fisher, LibriSpeech, and Baidu.
+
+96
+00:06:42,360 --> 00:06:44,720
+Baidu dataset only for internal usage.
+
+97
+00:06:44,720 --> 00:06:50,560
+So they have a total eleven thousand nine hundred forty hours of speech data.
+
+98
+00:06:50,560 --> 00:06:56,120
+WSJ, Switchboard, Fisher you can get from Linguistic Data Consortium.
+
+99
+00:06:56,120 --> 00:06:59,320
+LibriSpeech is the only free dataset in here.
+
+100
+00:06:59,320 --> 00:07:05,360
+They use 95minutes data per epoch for English and 25 minute per epoch for mandarin.
+
+101
+00:07:05,360 --> 00:07:09,720
+For data augmentation, they added noise to 40% of the dataset.
+
+102
+00:07:09,720 --> 00:07:12,120
+Next is the most interesting thing.
+
+103
+00:07:12,120 --> 00:07:16,380
+The read speech DS2 outperforms humans.
+
+104
+00:07:16,380 --> 00:07:22,200
+We can see some of the Word Error Rate (WER) is better than humans.
+
+105
+00:07:22,200 --> 00:07:25,460
+But accented speech is close to human performance.
+
+106
+00:07:25,460 --> 00:07:29,120
+Unfortunately noisy speech is worse than humans.
+
+107
+00:07:29,120 --> 00:07:36,240
+This is because they use synthetic voices rather than real environment recording.
+
+108
+00:07:36,240 --> 00:07:41,600
+Following is the methodology that I choose is scrum. Why?
+
+109
+00:07:41,600 --> 00:07:45,240
+Because it is fast and supports incremental deliverable.
+
+110
+00:07:45,240 --> 00:07:49,340
+Next is user story makes me understand the user requirement.
+
+111
+00:07:49,340 --> 00:07:52,320
+Product backlog can ensure the quality of the outcome.
+
+112
+00:07:52,320 --> 00:07:55,920
+Software, this is important because I faced a problem.
+
+113
+00:07:55,920 --> 00:08:00,660
+This problem is not caused by human error. It is a compatibility issue.
+
+114
+00:08:00,660 --> 00:08:05,380
+The story is when I need to read the audio by using librosa library.
+
+115
+00:08:05,380 --> 00:08:10,460
+It is a python distribution that allows us to access the file in the directory.
+
+116
+00:08:10,460 --> 00:08:16,400
+“pip” and “npm” is famous and professional tools. But after I installed librosa library.
+
+117
+00:08:16,400 --> 00:08:20,920
+I cannot compile my python code. I reinstall over and over again,
+
+118
+00:08:20,920 --> 00:08:26,480
+check through all the github and stackoverflow changing the version. But still didn’t solve the issues.
+
+119
+00:08:26,480 --> 00:08:29,500
+The moment I wanted to reinstall the whole environment,
+
+120
+00:08:29,500 --> 00:08:34,820
+I saw many articles mentioning the issues when installing  the librosa by using pip.
+
+121
+00:08:34,820 --> 00:08:40,280
+So they have to manually install the librosa, download, unzip, and put it to the folder.
+
+122
+00:08:40,280 --> 00:08:43,620
+So I know it is the distribution software problem.
+
+123
+00:08:43,620 --> 00:08:48,540
+Then I download anaconda3, anaconda 3 also is a python distribution. Ahha,
+
+124
+00:08:48,540 --> 00:08:54,340
+then I solve the issues, my code doesn't have any problem, librosa also don't have any problem.
+
+125
+00:08:54,340 --> 00:08:59,960
+The problem is the python distribution. So I will use anaconda 3 as my development tools.
+
+126
+00:08:59,960 --> 00:09:05,960
+The minimum requirement to run tensorflow in python 3.5 or above. 
+
+127
+00:09:05,960 --> 00:09:08,140
+And to support tensorflow lite,
+
+128
+00:09:08,140 --> 00:09:12,720
+you need at least  support android 6.0 or API23 above.
+
+129
+00:09:12,720 --> 00:09:16,940
+Here is the new system workflow. It didn't change too much, just adding a new module.
+
+130
+00:09:16,940 --> 00:09:23,040
+I insert a deep speech module here to generate subtitles for us. Hope it can flip this industry.
+
+131
+00:09:23,040 --> 00:09:28,600
+Here is the activity diagram for traditional methods. It is very similar to the previous video.
+
+132
+00:09:28,600 --> 00:09:33,200
+Here is the proposed method. It is also very similar to the previous design.
+
+133
+00:09:33,200 --> 00:09:37,880
+But I added an auto subtitle generator by using a deep speech module over here.
+
+134
+00:09:37,880 --> 00:09:43,120
+This is the use case diagram. Users are able to record, edit video and edit the subtitle.
+
+135
+00:09:43,120 --> 00:09:49,920
+The special about this app is this app has a feature to remove the stuttered speech and auto generate subtitles for us.
+
+136
+00:09:49,920 --> 00:09:56,540
+These features will be included in edit video and edit subtitle.
+
+137
+00:09:56,540 --> 00:09:59,460
+This is the activity diagram for editing the video.
+
+138
+00:10:19,480 --> 00:10:21,580
+So let us talk about the app design.
+
+139
+00:10:21,580 --> 00:10:27,440
+The app will include three main screens which are home screen, edit video screen and edit subtitle screen.
+
+140
+00:10:27,440 --> 00:10:33,500
+The feature mentioned in above will present in “one button to solve all” way. First is the home screen.
+
+141
+00:10:33,500 --> 00:10:39,960
+The user is able to record directly from the app or choose to import the video for future process.
+
+142
+00:10:39,960 --> 00:10:42,960
+This is the most efficient and fastest way for users.
+
+143
+00:10:42,960 --> 00:10:47,340
+Here is the extent for the first screen when the user chooses to press import,
+
+144
+00:10:47,340 --> 00:10:52,520
+in this screen user is able to view the gallery and import the video from the gallery.
+
+145
+00:10:52,520 --> 00:10:56,880
+Third is edit videos. This screen will take most of the time for the user.
+
+146
+00:10:56,880 --> 00:11:02,820
+Users are able to play or pause the video here. The feature will represent indirectly on the app.
+
+147
+00:11:02,820 --> 00:11:05,740
+because this project is more to automate the process.
+
+148
+00:11:05,740 --> 00:11:09,700
+The main goal of this project is to remove the stuttered speech automatically.
+
+149
+00:11:09,780 --> 00:11:13,460
+so the video will be cut into segments and removed automatically, 
+
+150
+00:11:13,460 --> 00:11:16,460
+or the user can choose to remove the segment manually.
+
+151
+00:11:16,520 --> 00:11:23,180
+So, we can see over here, here is the video player and here is the segment that user can choose to remove.
+
+152
+00:11:23,180 --> 00:11:26,620
+Here is the play pause button, previous and next.
+
+153
+00:11:26,620 --> 00:11:31,960
+This is the subtitle screen. The subtitle will be auto generated and present on this screen. 
+
+154
+00:11:31,960 --> 00:11:38,060
+The user is able to adjust the start and end time, edit the subtitle and pause the video.
+
+155
+00:11:38,140 --> 00:11:41,020
+Subtitles will be auto generated on this screen.
+
+156
+00:11:41,120 --> 00:11:43,480
+Thank you very much. That is my presentation.
+
